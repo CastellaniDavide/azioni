@@ -19,7 +19,7 @@
 using namespace std;
 
 // Variabiles
-int N;
+int N, last, temp, max_;
 
 // Main code
 int main()
@@ -30,12 +30,19 @@ int main()
 
   // Input
   cin >> N;
+  cin >> last;
+  N--;
+  max_ = INT_MIN;
 
-  // Code
-  // ...
+  for(int i = 0; i < N; ++i)
+  {
+      cin >> temp;
+      if (abs(temp - last) > max_)
+        max_ = abs(temp - last);
+  }
 
   // Output
-  cout << N << endl;
+  cout << max_ << endl;
 
   // End
   return 0;
