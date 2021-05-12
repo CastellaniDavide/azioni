@@ -39,6 +39,7 @@ int main()
       cin >> temp;
       if (abs(temp - last) > max_)
         max_ = abs(temp - last);
+      last = temp;
   }
 
   // Output
